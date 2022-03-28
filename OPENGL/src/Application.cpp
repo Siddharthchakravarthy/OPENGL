@@ -16,7 +16,7 @@
 #include "imgui/imgui_impl_glfw.h"
 #include "imgui/imgui_impl_opengl3.h"
 #include "Tests/TestClearColor.h"
-
+#include "Tests/TestTranslation.h"
 int main(void)
 {
     GLFWwindow* window;
@@ -139,7 +139,7 @@ int main(void)
         testMenu->RegisterTest<test::TestClearColor>("Sid Clear Color");
         Current = new test::TestClearColor(); // look at this if the child class is inheriting it publicly you can equate it
         // yaakandre publicly inherit maadideevi ondu and virtual functions nu override maadi use maadboodu 
-
+        testMenu->RegisterTest<test::TestTranslation>("Translation Test");
 
         while (!glfwWindowShouldClose(window))
         {
