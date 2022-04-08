@@ -20,10 +20,25 @@ namespace test {
 		void OnImGuiRender() override;
 
 		template <typename T>
-		void RegisterTest(const std::string &name) {
+		void RegisterTest(const std::string &name, T* tests) {
 			m_Tests.push_back(std::make_pair(name, []() {	 return new T();	}));
 		}
 
+		/*template<>
+		void RegisterTest<TestTranslation>(const std::string& name, TestTranslation tests) {
+			//Test g = tests;
+			// Test* ptr = &g;
+			std::function<Test* ()> F_Test = &Compute;
+			m_Tests.push_back(std::make_pair(name, F_Test() ) );
+		}
+
+		Test* Compute() {
+			Test* G;
+			TestTranslation* S;
+			G = S;
+			return G;
+		}
+		*/
 	private:
 		Test*& m_CurrentTest;
 		std::vector<std::pair< std::string, std::function<Test*()> > > m_Tests;

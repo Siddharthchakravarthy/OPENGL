@@ -164,8 +164,10 @@
     <ClCompile Include="src\Texture.cpp" />
     <ClCompile Include="src\Tests\TestClearColor.cpp" />
     <ClCompile Include="src\Tests\TestTranslation.cpp" />
+    <ClCompile Include="src\Tests\Test3D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="res\Shader\3DShader.shader" />
     <None Include="res\Shader\Shader.shader" />
     <None Include="src\Vendor\glm\detail\func_common.inl" />
     <None Include="src\Vendor\glm\detail\func_common_simd.inl" />
@@ -607,6 +609,7 @@
     <ClInclude Include="src\Texture.h" />
     <ClInclude Include="src\Tests\TestClearColor.h" />
     <ClInclude Include="src\Tests\TestTranslation.h" />
+    <ClInclude Include="src\Tests\Test3D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
