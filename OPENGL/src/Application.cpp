@@ -18,10 +18,12 @@
 #include "Tests/TestClearColor.h"
 #include "Tests/TestTranslation.h"
 #include "Tests/Test3D.h"
+
 int main(void)
 {
     GLFWwindow* window;
-
+    bool keys[1024];
+    
     /* Initialize the library */
     if (!glfwInit())
         return -1;
@@ -63,7 +65,8 @@ int main(void)
 
         test::Test* CurrentTest = nullptr;
         test::Test* Current = nullptr;
-        test::TestMenu* testMenu = new test::TestMenu(CurrentTest);
+        
+        test::TestMenu* testMenu = new test::TestMenu(CurrentTest, window);
         CurrentTest = testMenu;
         test::TestClearColor g;
         test::Test3D o;
@@ -83,6 +86,7 @@ int main(void)
             ImGui_ImplGlfw_NewFrame();
             ImGui::NewFrame();
             Current->OnImGuiRender();
+            //Current->OnHandleKeys(window)
             if (CurrentTest) {
                 CurrentTest->OnUpdate(0.0f);
                 CurrentTest->OnRender();

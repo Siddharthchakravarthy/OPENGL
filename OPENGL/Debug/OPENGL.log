@@ -1,2 +1,8 @@
-﻿  Test3D.cpp
+﻿  Test.cpp
+C:\DEV\OpenGL\OPENGL\OPENGL\src\Tests\Test.cpp(63,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\DEV\OpenGL\OPENGL\OPENGL\src\Tests\Test.cpp(64,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\DEV\OpenGL\OPENGL\OPENGL\src\Tests\Test.cpp(68,33): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\DEV\OpenGL\OPENGL\OPENGL\src\Tests\Test.cpp(69,49): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\DEV\OpenGL\OPENGL\OPENGL\src\Tests\Test.cpp(71,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\DEV\OpenGL\OPENGL\OPENGL\src\Tests\Test.cpp(72,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   OPENGL.vcxproj -> C:\DEV\OpenGL\OPENGL\Debug\OPENGL.exe

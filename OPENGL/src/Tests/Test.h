@@ -1,5 +1,6 @@
 #pragma once
 #include "Renderer.h"
+#include <GLFW/glfw3.h>
 #include <functional>
 #include "imgui/imgui.h"
 namespace test {
@@ -15,7 +16,7 @@ namespace test {
 	class TestMenu : public Test {
 	public:
 
-		TestMenu(Test*& CurrentTest);
+		TestMenu(Test*& CurrentTest, GLFWwindow * window);
 		~TestMenu();
 		void OnImGuiRender() override;
 
@@ -40,6 +41,17 @@ namespace test {
 		}
 		*/
 	private:
+		bool keys[1024];
+		void CreateCallback(GLFWwindow* window);
+		void SetWindowUserPointer(GLFWwindow* mainWindow);
+		static void OnHandleKeys(GLFWwindow* window, int key, int code, int action, int mode);
+
+		bool mouseFirstMoved;
+		float lastX;
+		float lastY;
+		float xChange;
+		float yChange;
+		static void OnHandleMouse(GLFWwindow* window, double xpos, double ypos);
 		Test*& m_CurrentTest;
 		std::vector<std::pair< std::string, std::function<Test*()> > > m_Tests;
 	};
